@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<script src="../../../jquery.min.js"></script>
+	<script src="../../../underscore-min.js"></script>
+	<script src="../../../backbone-min.js"></script>
+	<script>
+		var Todo = Backbone.Model.extend({});
+		var todo1 = new Todo();
+		console.log(JSON.stringify(todo1));
+		var todo2 = new Todo({
+			title: 'Check the attributes of both model instances in the console.',
+			completed: true
+		});
+		console.log(JSON.stringify(todo2));
+	</script>
+</body>
+</html>

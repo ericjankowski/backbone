@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<script src="../../../jquery.min.js"></script>
+	<script src="../../../underscore-min.js"></script>
+	<script src="../../../backbone-min.js"></script>
+	<script>
+		var Todo = Backbone.Model.extend({
+			defaults: {
+				title: '',
+				completed: false
+			}
+		});
+		
+		var todo1 = new Todo();
+		console.log(JSON.stringify(todo1));
+
+		var todo2 = new Todo({
+			title: 'Check attrigutes of the logged models in the console.'
+		});
+		console.log(JSON.stringify(todo2));
+
+		var todo3 = new Todo({
+			title: 'This todo is done, so take no action on this one.',
+			completed: true
+		});
+		console.log(JSON.stringify(todo3));
+		
+	</script>
+</body>
+</html>

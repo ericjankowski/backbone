@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Backbone.js * TodoMVC</title>
+	<link rel="stylesheet" href="assets/base.css">
+</head>
+<body>
+	<script src="../../../jquery.min.js"></script>
+	<script src="../../../underscore-min.js"></script>
+	<script src="../../../backbone-min.js"></script>
+	<script>
+		var TodoView = Backbone.View.extend({
+			tagName: 'li',
+			todoTpl: _.template("An example template"),
+			events: {
+				'dblclick label': 'edit',
+				'keypress .edit': 'updateOnEnter',
+				'blur .edit': 'close'
+			},
+			render: function(){
+				this.$el.html( this.todoTpl( this.model.toJSON()));
+				this.input = this.$('.edit');
+				return this;
+			},
+			edit: function(){
+
+			},
+			close: function(){
+
+			},
+			updateOnEnter: function(){
+
+			}
+		});
+
+		var todoView = new TodoView();
+
+		console.log(todoView.el);
+	</script>
+</body>
+</html>

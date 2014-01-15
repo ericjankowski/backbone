@@ -1,3 +1,5 @@
+console.log("reading demo.js");
+
 var Todo = Backbone.Model.extend({
 	defaults: {
 		title: '',

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<script src="../../../jquery.min.js"></script>
+	<script src="../../../underscore-min.js"></script>
+	<script src="../../../backbone-min.js"></script>
+	<script>
+		var Todo = Backbone.Model.extend({
+			initialize: function(){
+				console.log('This model has been initialized.');
+			}
+		});
+		var myTodo = new Todo();
+		
+	</script>
+</body>
+</html>

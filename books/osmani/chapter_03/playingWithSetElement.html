@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<script src="../../../jquery.min.js"></script>
+	<script src="../../../underscore-min.js"></script>
+	<script src="../../../backbone-min.js"></script>
+	<script>
+		var button1 = $('<button></button>');
+		var button2 = $('<button></button>');
+
+		var View = Backbone.View.extend({
+			events: {
+				click: function(e){
+					console.log(view.el === e.target);
+				}
+			}
+		});
+
+		var view = new View({el: button1});
+		view.setElement(button2);
+		console.log('Clicking button1');
+		button1.trigger('click');
+		console.log('Clicking button2');
+		button2.trigger('click');
+	</script>
+</body>
+</html>
